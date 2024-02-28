@@ -1,0 +1,17 @@
+#include " binary_trees.h"
+/**
+ * binary_tree_balance - func measures the balance factor of tree
+ * @tree: tree to be measured
+ * Return: the k
+ */
+int binary_tree_balance(const binary_tree_t *tree)
+{
+	int left_h, right_h;
+
+	if (tree == NULL)
+		return (0);
+	left_h = binary_tree_height(tree->left);
+	right_h = binary_tree_height(tree->right);
+
+	return (left_h - right_h);
+}
